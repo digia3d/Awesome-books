@@ -1,23 +1,22 @@
-const myBooks = [
+const bookCollection = [
     {
-        title: 'The Godfather',
-        author: 'Mario Puzo',
+      title: 'The Sulivan',
+      author: 'Mario Puzo',
     },
-
     {
-        title: 'Becoming',
-        author: 'Michele',
+      title: 'The Poison Arrow Tree',
+      author: 'Shel Arensen',
     },
-]
-
-function addBook(book) {
-    myBooks.push(book);
+  ];
+  
+  function addBook(book) {
+    bookCollection.push(book);
   }
-
+  
   function removeBook(index) {
-    myBooks.splice(index, 1);
+    bookCollection.splice(index, 1);
   }
-
+  
   function displayBooks(books) {
     const booksContainer = document.querySelector('#book-collection');
   
@@ -34,27 +33,39 @@ function addBook(book) {
   
     booksContainer.innerHTML = booksHtml.join('');
   }
-
-  window.onload = () => {
-    const bookForm = document.getElementById('bookForm')
- 
-     bookForm.addEventListener('submit',  (event) => {
-          event.preventDefault();
-         
-     const bookTitle = document.getElementById('title');
-     const bookAuthor = document.getElementById('author');
- 
-     let newBook = { title: bookTitle.value,
-     author: bookAuthor.value,};
- 
-     addBook(newBook);
-     displayBooks(bookCollection); 
-     }
-     );
- 
- displayBooks(bookCollection); 
-  }
- 
   
-
-
+  
+  
+  
+  
+  
+  
+  window.onload = () => {
+     const bookForm = document.getElementById('bookForm')
+  
+      bookForm.addEventListener('submit',  (event) => {
+           event.preventDefault();
+          
+      const bookTitle = document.getElementById('title');
+      const bookAuthor = document.getElementById('author');
+  
+      let newBook = { title: bookTitle.value,
+      author: bookAuthor.value,};
+  
+      addBook(newBook);
+      displayBooks(bookCollection); 
+      }
+      );
+  
+  displayBooks(bookCollection); 
+   }
+  
+  // remove div on click
+  const removeButton = document.getElementById('remove-btn');
+  const bookDiv = document.querySelectorAll('.book');
+  
+  function removeDiv () {
+      bookDiv.style.display = 'none';
+  }
+  
+  removeButton.addEventListener('click', removeDiv);
