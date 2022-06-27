@@ -8,28 +8,32 @@
   <title>Awesome books</title>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Awesome books</h1>
-    </nav>
-    <div class="container">
-      <p>Lorem ipsum</p>
-      <p>Testeroo Testyy</p>
-      <button type="button">Remove</button>
-      <hr>
-      <p>Second book</p>
-      <p>Testeroo Testyy</p>
-      <button type="button">Remove</button>
-      <hr>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Title" required />
+  <h1>Awesome books</h1>
+
+    <div id="book-collection">
+      <div class="book">
+        <h2>Book title</h2>
+        <p>Book author</p>
+        <button id="remove-btn">Remove</button>
+        <hr />
       </div>
-      <br>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Author" required />
+
+      <div class="book">
+        <h2>Book title 2</h2>
+        <p>Book author 2</p>
+        <button id="remove-btn" >Remove</button>
+        <hr />
       </div>
-    </div>
-    
-  </header>
+ </div>
+ 
+    <form id="bookForm">
+      <div><input id="title" placeholder="title" /></div>
+      <br />
+      <div><input id="author" placeholder="author" /></div>
+      <br />
+      <button type="submit">Add</button>
+    </form>
+
+  <script src="app.js"></script>
 </body>
 </html>
