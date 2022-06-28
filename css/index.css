@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Books {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.Books .container {
+  max-width: 400px;
+}
+
+.Books .container .inputs input {
+  display: block;
+  margin-bottom: 20px;
+}
