@@ -1,35 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Awesome books</title>
-
-    <script src="./app.js"></script>
-  </head>
-  <body>
-    <h1>Awesome books</h1>
-    <div id="book-collection">
-      <div class="book">
-        <h2>Book title</h2>
-        <p>Book author</p>
-        <button id="remove-btn">Remove</button>
-        <hr />
-      </div>
-      <div class="book">
-        <h2>Book title 2</h2>
-        <p>Book author 2</p>
-        <button id="remove-btn" >Remove</button>
-        <hr />
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWESOME-BOOKS</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="Books">
+        <div class="container">
+            <h1 class="title">AWESOME-BOOKS</h1>
+            <div class="booksList" id="list"></div>
+            <form class="inputs">
+                <input type="text" id="title" placeholder="title" name="title" required/>
+                <input type="text" id="Author" placeholder="Author" name="Author" required/>
+                <button class="add" type="button">Add</button>
+            </form>
+        </div>
     </div>
-    <form id="bookForm">
-      <div><input id="title" placeholder="title" /></div>
-      <br />
-      <div><input id="author" placeholder="author" /></div>
-      <br />
-      <button type="submit">Add</button>
-    </form>
-  </body>
+    <script src="app.js" defer></script>
+</body>
 </html>
